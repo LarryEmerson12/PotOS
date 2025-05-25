@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { IconBrandGithub } from "@tabler/icons-react";
 import Loading from "./loading";
+import Cursor from "@/components/ui/cursor";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -74,7 +75,8 @@ export default function Home() {
     {
       title: "GitHub",
       icon: <IconBrandGithub size={20} />,
-      onClick: () => window.open("https://github.com/LarryEmerson12/PotOS", "_blank"),
+      onClick: () =>
+        window.open("https://github.com/LarryEmerson12/PotOS", "_blank"),
     },
   ];
 
@@ -87,6 +89,7 @@ export default function Home() {
       style={{ backgroundImage: `url(/Wallpaper.jpg)` }}
       className="min-h-screen bg-cover bg-center p-4 flex justify-center items-end"
     >
+      <Cursor size={20} />
       <FloatingDock items={links} />
     </main>
   );
