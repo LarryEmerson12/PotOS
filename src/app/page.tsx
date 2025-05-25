@@ -1,10 +1,18 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { IconBrandGithub } from "@tabler/icons-react";
+import Loading from "./loading";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 5000); // 10 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
   const links = [
     {
       title: "Menu",
@@ -16,9 +24,8 @@ export default function Home() {
           alt="Menu Icon"
         />
       ),
-      href: "#",
+      onClick: () => {},
     },
-
     {
       title: "Launchpad",
       icon: (
@@ -29,14 +36,14 @@ export default function Home() {
           alt="Files Icon"
         />
       ),
-      href: "#",
+      onClick: () => {},
     },
     {
       title: "Files",
       icon: (
         <img src="/icons/files.png" width={20} height={20} alt="Files Icon" />
       ),
-      href: "#",
+      onClick: () => {},
     },
     {
       title: "Browser",
@@ -48,37 +55,39 @@ export default function Home() {
           alt="Browser Icon"
         />
       ),
-      href: "#",
+      onClick: () => {},
     },
     {
       title: "Camera",
       icon: (
         <img src="/icons/camera.png" width={20} height={20} alt="Camera Icon" />
       ),
-      href: "#",
+      onClick: () => {},
     },
-
     {
       title: "Notes",
       icon: (
         <img src="/icons/notes.png" width={20} height={20} alt="Notes Icon" />
       ),
-      href: "#",
+      onClick: () => {},
     },
     {
       title: "GitHub",
       icon: <IconBrandGithub size={20} />,
-      href: "#",
+      onClick: () => window.open("https://github.com/LarryEmerson12/PotOS", "_blank"),
     },
   ];
+
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
     <main
       style={{ backgroundImage: `url(/Wallpaper.jpg)` }}
       className="min-h-screen bg-cover bg-center p-4 flex justify-center items-end"
     >
-      <FloatingDock
-        items={links}
-      />
+      <FloatingDock items={links} />
     </main>
   );
 }
