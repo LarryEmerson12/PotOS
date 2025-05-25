@@ -31,11 +31,6 @@ const Cursor: React.FC<CursorProps> = ({ size }) => {
         pointerEvents: "none",
         zIndex: 9999,
       }}
-      animate={{
-        top: mousePosition.y - size / 2,
-        left: mousePosition.x - size / 2,
-      }}
-      transition={{ type: "spring", stiffness: 500, damping: 30 }}
     >
       <div
         style={{
