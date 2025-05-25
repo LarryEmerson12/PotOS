@@ -2,9 +2,7 @@
 
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
-import {
-  IconBrandGithub,
-} from "@tabler/icons-react";
+import { IconBrandGithub } from "@tabler/icons-react";
 
 export default function Home() {
   const links = [
@@ -36,12 +34,7 @@ export default function Home() {
     {
       title: "Files",
       icon: (
-        <img
-          src="/icons/files.png"
-          width={20}
-          height={20}
-          alt="Files Icon"
-        />
+        <img src="/icons/files.png" width={20} height={20} alt="Files Icon" />
       ),
       href: "#",
     },
@@ -60,12 +53,7 @@ export default function Home() {
     {
       title: "Camera",
       icon: (
-        <img
-          src="/icons/camera.png"
-          width={20}
-          height={20}
-          alt="Camera Icon"
-        />
+        <img src="/icons/camera.png" width={20} height={20} alt="Camera Icon" />
       ),
       href: "#",
     },
@@ -73,20 +61,13 @@ export default function Home() {
     {
       title: "Notes",
       icon: (
-        <img
-          src="/icons/notes.png"
-          width={20}
-          height={20}
-          alt="Notes Icon"
-        />
+        <img src="/icons/notes.png" width={20} height={20} alt="Notes Icon" />
       ),
       href: "#",
     },
     {
       title: "GitHub",
-      icon: (
-        <IconBrandGithub size={20} />
-      ),
+      icon: <IconBrandGithub size={20} />,
       href: "#",
     },
   ];
@@ -96,7 +77,6 @@ export default function Home() {
       className="min-h-screen bg-cover bg-center p-4 flex justify-center items-end"
     >
       <FloatingDock
-        mobileClassName="translate-y-20" // only for demo, remove for production
         items={links}
       />
     </main>
