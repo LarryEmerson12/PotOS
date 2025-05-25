@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { IconBrandGithub } from "@tabler/icons-react";
 import Loading from "./loading";
-import Button from "@/components/ui/button";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
