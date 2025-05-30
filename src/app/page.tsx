@@ -5,14 +5,17 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 import { IconBrandGithub } from "@tabler/icons-react";
 import Loading from "./loading";
 import Cursor from "@/components/ui/cursor";
+import MenuApp from "@/components/apps/menu-app";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 5000); // 10 seconds
+    const timer = setTimeout(() => setLoading(false), 1500); // 1.5 seconds
     return () => clearTimeout(timer);
   }, []);
+
+  const [menuAppOpen, setMenuAppOpen] = useState(false);
 
   const links = [
     {
@@ -25,7 +28,7 @@ export default function Home() {
           alt="Menu Icon"
         />
       ),
-      onClick: () => {},
+      onClick: () => setMenuAppOpen(!menuAppOpen),
     },
     {
       title: "Launchpad",
@@ -90,6 +93,7 @@ export default function Home() {
       className="min-h-screen bg-cover bg-center p-4 flex justify-center items-end"
     >
       <Cursor size={20} />
+      {menuAppOpen && <MenuApp />}
       <FloatingDock items={links} />
     </main>
   );
