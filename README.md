@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+> 🚧 Note: This project is still in progress. There might be a few errors and missing components 🚧
 
-## Getting Started
+# 🪴 Pot OS
 
-First, run the development server:
+This open source project was created to replicate MacOS but with minimalist features, using standard web technologies like HTML, CSS, and JS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🔗🔗 [pot-os-omega.vercel.app](https://www.pot-os-omega.vercel.app)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🤔 Why
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+I've always wanted to create a operating system. I love Macos for the design. However, I like to make things minimalist. So here it is.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🍔 Stack
 
-## Learn More
+- Framework - NextJS ⚛️
+- Bundler - Turbopack 🧊
+- Component Library - None 🎉
+- Styling Solution - Tailwind CSS 🦄
 
-To learn more about Next.js, take a look at the following resources:
+## 🕐 When will it be ready?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Gif](https://media1.tenor.com/m/urk9tvQ5RN8AAAAd/titan-tv-man.gif)
