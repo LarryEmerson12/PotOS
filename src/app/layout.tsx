@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "PotOS",
-  description: "The Simplest Operating System.",
+  description: "🪴 The Simplest Operating System.",
 };
 
 const lexend = Lexend({
