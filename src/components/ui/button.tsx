@@ -17,7 +17,7 @@ export default function Button({
 }: ButtonProps) {
   return (
     <button
-      className={`bg-white text-black py-1 px-2 rounded-xl hover:bg-gray-400 transition-colors duration-200 ${className}`}
+      className={`bg-white text-black py-1 px-2 rounded-xl hover:bg-gray-400 transition-colors duration-200 items-center ${className}`}
       onClick={onClick}
       disabled={disabled}
     >

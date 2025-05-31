@@ -47,7 +47,7 @@ export default function Draggable({ children }: DraggableProps) {
 
   return (
     <div
-      className="absolute flex flex-col items-center justify-center bg-white/20 rounded-xl p-4 backdrop-blur-md"
+      className="absolute bg-white/20 rounded-xl p-4 backdrop-blur-md"
       style={{ left: position.x, top: position.y, position: "absolute" }}
       onMouseDown={handleMouseDown}
     >
