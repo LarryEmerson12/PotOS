@@ -6,6 +6,7 @@ import { IconBrandGithub } from "@tabler/icons-react";
 import Loading from "./loading";
 import Cursor from "@/components/ui/cursor";
 import MenuApp from "@/components/apps/menu-app";
+import FilesApp from "@/components/apps/files-app";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -15,14 +16,16 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Here is the states for the apps
   const [menuAppOpen, setMenuAppOpen] = useState(false);
+  const [filesAppOpen, setFilesAppOpen] = useState(false);
 
   const links = [
     {
       title: "Menu",
       icon: (
         <img
-          src="/icons/potted-plant.png"
+          src="/icons/icons/potted-plant.png"
           width={20}
           height={20}
           alt="Menu Icon"
@@ -34,10 +37,10 @@ export default function Home() {
       title: "Launchpad",
       icon: (
         <img
-          src="/icons/launchpad.png"
+          src="/icons/app/launchpad.png"
           width={20}
           height={20}
-          alt="Files Icon"
+          alt="Launchpad Icon"
         />
       ),
       onClick: () => {},
@@ -45,15 +48,20 @@ export default function Home() {
     {
       title: "Files",
       icon: (
-        <img src="/icons/files.png" width={20} height={20} alt="Files Icon" />
+        <img
+          src="/icons/app/files.png"
+          width={20}
+          height={20}
+          alt="Files Icon"
+        />
       ),
-      onClick: () => {},
+      onClick: () => setFilesAppOpen(!filesAppOpen),
     },
     {
       title: "Browser",
       icon: (
         <img
-          src="/icons/browser.png"
+          src="/icons/app/browser.png"
           width={20}
           height={20}
           alt="Browser Icon"
@@ -64,14 +72,24 @@ export default function Home() {
     {
       title: "Camera",
       icon: (
-        <img src="/icons/camera.png" width={20} height={20} alt="Camera Icon" />
+        <img
+          src="/icons/app/camera.png"
+          width={20}
+          height={20}
+          alt="Camera Icon"
+        />
       ),
       onClick: () => {},
     },
     {
       title: "Notes",
       icon: (
-        <img src="/icons/notes.png" width={20} height={20} alt="Notes Icon" />
+        <img
+          src="/icons/app/notes.png"
+          width={20}
+          height={20}
+          alt="Notes Icon"
+        />
       ),
       onClick: () => {},
     },
@@ -94,6 +112,7 @@ export default function Home() {
     >
       <Cursor size={20} />
       {menuAppOpen && <MenuApp />}
+      {filesAppOpen && <FilesApp />}
       <FloatingDock items={links} />
     </main>
   );

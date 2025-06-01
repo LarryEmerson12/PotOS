@@ -9,11 +9,11 @@ export default function MenuApp() {
       <div className="w-[20ch]">
         <div className="flex flex-col items-center gap-4">
           <Image
-            src="/icons/potted-plant.png"
+            src="/icons/icons/potted-plant.png"
             alt="Logo"
             width={50}
             height={50}
-            className="rounded-full select-none pointer-events-none"
+            className="select-none pointer-events-none"
             draggable={false}
           />
         </div>
@@ -22,7 +22,7 @@ export default function MenuApp() {
           <Tooltip content="Settings">
             <Button className="w-[3.75ch]">
               <Image
-                src={"/icons/gear.png"}
+                src={"/icons/app/gear.png"}
                 alt="Gear Icon"
                 width={20}
                 height={20}
@@ -33,7 +33,7 @@ export default function MenuApp() {
           <Tooltip content="Lock">
             <Button className="w-[3.75ch]">
               <Image
-                src={"/icons/lock.png"}
+                src={"/icons/icons/lock.png"}
                 alt="Lock Icon"
                 width={20}
                 height={20}
@@ -44,7 +44,7 @@ export default function MenuApp() {
           <Tooltip content="Power">
             <Button className="w-[3.75ch]">
               <Image
-                src={"/icons/power.png"}
+                src={"/icons/icons/power.png"}
                 alt="Power Icon"
                 width={20}
                 height={20}
