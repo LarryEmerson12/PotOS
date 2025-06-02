@@ -67,7 +67,8 @@ export default function Home() {
           alt="Browser Icon"
         />
       ),
-      onClick: () => {},
+      onClick: () =>
+        window.open("https://www.google.com", "_blank"),
     },
     {
       title: "Camera",
