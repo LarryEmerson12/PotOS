@@ -33,18 +33,7 @@ export default function Home() {
       ),
       onClick: () => setMenuAppOpen(!menuAppOpen),
     },
-    {
-      title: "Launchpad",
-      icon: (
-        <img
-          src="/icons/app/launchpad.png"
-          width={20}
-          height={20}
-          alt="Launchpad Icon"
-        />
-      ),
-      onClick: () => {},
-    },
+
     {
       title: "Files",
       icon: (
@@ -67,8 +56,7 @@ export default function Home() {
           alt="Browser Icon"
         />
       ),
-      onClick: () =>
-        window.open("https://www.google.com", "_blank"),
+      onClick: () => window.open("https://www.google.com", "_blank"),
     },
     {
       title: "Camera",
