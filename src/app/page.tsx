@@ -95,6 +95,18 @@ export default function Home() {
       onClick: () => {},
     },
     {
+      title: "System Preferences",
+      icon: (
+        <img
+          src="/icons/app/gear.png"
+          width={20}
+          height={20}
+          alt="System Preferences Icon"
+        />
+      ),
+      onClick: () => {},
+    },
+    {
       title: "GitHub",
       icon: <IconBrandGithub size={20} />,
       onClick: () =>
